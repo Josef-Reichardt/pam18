@@ -32,7 +32,7 @@ body {
         border-left: 15px solid @darkgray;
         padding: 40px 20px;
         background: @white;
-        &:nth-child(2) {
+        &:nth-child(2n+0) {
             background: @lightgray;
         }
     }
@@ -53,16 +53,34 @@ h6 {
     padding: 0;
     margin: 0;
 }
-h1{font-size: 34px;}
-h2{font-size: 30px;}
-h3{font-size: 26px;}
-h4{font-size: 22px;}
-h5{font-size: 18px;}
-h6{font-size: 16px;}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
 
 p {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -115,18 +133,6 @@ export default {
         Speaker,
         Social,
         Contact
-    },
-    methods: {
-        handleScroll() {
-          var all = document.querySelectorAll('[id]');
-            console.log(window.scrollY);
-        }
-    },
-    created() {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    destroyed() {
-        window.removeEventListener('scroll', this.handleScroll);
     }
 };
 

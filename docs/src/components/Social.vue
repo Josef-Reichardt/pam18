@@ -2,7 +2,7 @@
 
 @import "../assets/variables.less";
 [id]#social {
-    border-left-color: @lightgray;
+    border-left-color: @darkgray;
 }
 
 </style>

@@ -2,7 +2,7 @@
 
 @import "../assets/variables.less";
 [id]#speaker {
-    border-left-color: @darkgray;
+    border-left-color: @lightgray;
 }
 
 </style>

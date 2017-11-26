@@ -85,7 +85,7 @@
         }
         > h2 {
             font-size: 34px;
-            top: 40px;
+            top: 70px;
             right: 50px;
         }
     }
@@ -112,7 +112,7 @@
         }
         > h2 {
             font-size: 60px;
-            top: 60px;
+            top: 100px;
             right: 90px;
         }
     }
