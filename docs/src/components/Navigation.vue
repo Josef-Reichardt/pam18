@@ -45,7 +45,7 @@ nav {
     <ul>
         <li><a data-scroll href="#pam18" :class="{ active: currentHash=='pam18' }"><span>#pam18</span></a></li>
         <li><a data-scroll href="#location" :class="{ active: currentHash=='location' }"><span>Wann &amp; Wo?</span></a></li>
-        <li><a data-scroll href="#speaker" :class="{ active: currentHash=='speaker' }"><span>Wer?</span></a></li>
+        <li><a data-scroll href="#speaker" :class="{ active: currentHash=='speaker' }"><span>Redner?</span></a></li>
     </ul>
 </nav>
 

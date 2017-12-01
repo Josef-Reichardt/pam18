@@ -15,21 +15,21 @@
         > h1 {
             text-transform: uppercase;
             font-size: 16px;
-            color: @lightgray;
-            text-shadow: 1px 1px 0 @orange;
+            font-weight: bold;
+            color: @darkgray;
             >span {
                 position: absolute;
-                background-color: @darkgray;
-                padding: 2px 15px;
-                box-shadow: -2px 2px 0 @lila;
-                border: 1px solid @darkgray;
-                border-radius: 1px;
+                padding: 2px 10px;
+                background: @white;
+                border-color: @darkgray;
+                border-style: solid;
             }
             > .h1-part1 {
-                top: 80px;
+                top: 79px;
                 left: 40px;
                 transform: rotate(-2deg);
                 z-index: 1;
+                border-width: 2px 5px 3px 1px;
             }
             > .h1-part2 {
                 font-size: 20px;
@@ -37,17 +37,21 @@
                 left: 30px;
                 transform: rotate(1deg);
                 z-index: 0;
+                border-width: 2px 1px 4px 7px;
+                color: @orange;
             }
-            > .h1-part3 {
-                top: 142px;
-                left: 160px;
-                transform: rotate(-2deg);
+            > .h1-part3, > .h1-part4 {
+                top: 170px;
+                left: 0;
+                padding-right: 20px;
                 z-index: 1;
-                background-color: @lila;
-                color: @lightgray;
-                border: 1px solid @orange;
-                box-shadow: 2px 2px 0 @darkgray;
-                text-shadow: 1px 1px 0 @darkgray;
+                color: @lila;
+                background: fade(@lightgray, 50%);
+                border: 0;
+            }
+            > .h1-part4 {
+                left: auto;
+                right: 0;
             }
         }
         > h2 {
@@ -70,17 +74,24 @@
         > h1 {
             font-size: 30px;
             > .h1-part1 {
-                top: 170px;
+                top: 127px;
                 left: 60px;
+                border-width: 2px 6px 5px 1px;
             }
             > .h1-part2 {
                 font-size: 34px;
-                top: 215px;
+                top: 175px;
                 left: 50px;
+                border-width: 2px 1px 5px 8px;
+            }
+            > .h1-part3, > .h1-part4 {
+                top: 310px;
             }
             > .h1-part3 {
-                top: 265px;
-                left: 250px;
+              padding-left: 50px;
+            }
+            > .h1-part4 {
+              padding-right: 50px;
             }
         }
         > h2 {
@@ -99,15 +110,22 @@
             > .h1-part1 {
                 top: 180px;
                 left: 110px;
+                border-width: 3px 8px 6px 2px;
             }
             > .h1-part2 {
                 font-size: 60px;
                 top: 240px;
                 left: 90px;
+                border-width: 3px 2px 6px 10px;
+            }
+            > .h1-part3, > .h1-part4 {
+                top: 400px;
             }
             > .h1-part3 {
-                top: 320px;
-                left: 470px;
+              padding-left: 90px;
+            }
+            > .h1-part4 {
+              padding-right: 90px;
             }
         }
         > h2 {
@@ -128,7 +146,8 @@
         <h1>
           <span class="h1-part1">Piratiger</span>
           <span class="h1-part2">Aschermittwoch</span>
-          <span class="h1-part3">2018</span>
+          <span class="h1-part3">Straubing</span>
+          <span class="h1-part4">14.02.2018</span>
         </h1>
         <h2><a href="#social">#pam18</a></h2>
     </hgroup>
