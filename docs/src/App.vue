@@ -1,5 +1,4 @@
 <style lang="less">
-
 @import "assets/variables.less";
 
 /* fonts: */
@@ -16,7 +15,6 @@
     src: url("assets/fonts/roboto/Roboto.eot?#iefix") format("embedded-opentype"), url("assets/fonts/roboto/Roboto.woff2") format("woff2"), url("assets/fonts/roboto/Roboto.woff") format("woff"), url("assets/fonts/roboto/Roboto.ttf") format("truetype"), url("assets/fonts/roboto/Roboto.svg#Roboto Regular V2") format("svg");
 }
 
-
 /* basic styles: */
 
 body {
@@ -26,8 +24,8 @@ body {
     text-rendering: geometricPrecision;
     color: @black;
     background: @white;
-    >#app>main>section,
-    >#app>footer>section {
+    > #app > footer > section,
+    > #app > main > section {
         min-height: 300px;
         border-left: 15px solid @darkgray;
         padding: 40px 20px;
@@ -89,32 +87,66 @@ a {
     &:hover {
         border-bottom: 2px solid @orange;
     }
-}
 
+    &.twitter {
+        font-size: 0.8em;
+        background: #4AB3F4;
+        color: @lightgray;
+        padding: 1px 3px;
+        border-radius: 2px;
+        &:hover {
+            border: none;
+        }
+        &::before {
+            content: ' ';
+            width: 20px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: text-top;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVQ4jcXTzytFQRjG8c85C0ny6yh2NxtlYcGClFK47G6RrG1t1N1Y+FEIXQtlY2mp+C+UnYW/yeLMqeN4010o35qaeZ9n3nnfmYZ/Jq8vVpAFpgw7uEhjHkM4xVZlGsArToIEZ1ir+Y5wiTecV6YF7CXjHYoUn8NBkHQaT2hXgRYO07xIldzgGbNBgnV064FlvKfe6kymspt0a1WCqRTMA3PEteDCHzDTx+Yct5HQTkmabTTZxWokZH1UUShf6RvjGE3iJj6xGGyewCNGmsISPvCCbQw29Bwd3KeDQnLso4cr5YscK2+7h41f2vpBhjEMi//G3/IFbSgcAvdh4fkAAAAASUVORK5CYII=") no-repeat left center;
+        }
+    }
+
+    &.facebook {
+        font-size: 0.8em;
+        background: #4267B2;
+        color: @lightgray;
+        padding: 1px 3px;
+        border-radius: 2px;
+        &:hover {
+            border: none;
+        }
+        &::before {
+            content: ' ';
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: text-top;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXklEQVQ4je3PoQ2AUAxF0eOQGBZgE9ZBQ7CAZwzGQPzRMFUEUwRBcJPm1bybli9TYcUcU7KCHi1qDDiygjlyQpMtw3LJFAVj7F1IUi/cCfbsFcsl0/wCtiiXp4J3OAE/+RIs6cJYHgAAAABJRU5ErkJggg==") no-repeat left center;
+        }
+    }
+}
 </style>
 
 <template>
-
 <div id="app">
-    <header id="pam18">
-        <navigation/>
-        <wallpaper/>
-    </header>
-    <main>
-        <intro/>
-        <location/>
-        <speaker/>
-        <social/>
-    </main>
-    <footer>
-        <contact/>
-    </footer>
+  <header id="pam18">
+    <navigation/>
+    <wallpaper/>
+  </header>
+  <main>
+    <intro/>
+    <location/>
+    <speaker/>
+    <social/>
+  </main>
+  <footer>
+    <contact/>
+  </footer>
 </div>
-
 </template>
 
 <script>
-
 import Navigation from '@/components/Navigation';
 import Wallpaper from '@/components/Wallpaper';
 import Intro from '@/components/Intro';
@@ -124,16 +156,15 @@ import Social from '@/components/Social';
 import Contact from '@/components/Contact';
 
 export default {
-    name: 'app',
-    components: {
-        Navigation,
-        Wallpaper,
-        Intro,
-        Location,
-        Speaker,
-        Social,
-        Contact
-    }
+  name: 'app',
+  components: {
+    Navigation,
+    Wallpaper,
+    Intro,
+    Location,
+    Speaker,
+    Social,
+    Contact
+  }
 };
-
 </script>

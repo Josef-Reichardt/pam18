@@ -1,30 +1,69 @@
 <style lang="less">
-
 @import "../assets/variables.less";
 [id]#intro {
     border-left-color: @orange;
     background-color: fade(@lightgray, 70%);
+
+    .image-wrapper {
+        display: block;
+        text-align: center;
+        margin: 30px 20px 10px;
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: 3px solid @white;
+            box-shadow: 0 0 0 5px @black;
+        }
+    }
+
+    .no-col-break {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
 }
 
+@media (min-width: 768px) {
+    [id]#intro {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    [id]#intro {
+        column-count: 3;
+    }
+}
 </style>
 
 <template>
-
 <section id="intro">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
-        feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>
+    Kaum ist das Jahr 2017 rum geht es auch schon auf die nächsten Feiertage zu. Am 14. Februar 2018 erwarten uns gleich zwei besondere Tage: Neben dem Valentinstag ist zugleich auch Aschermittwoch.
+    <br>An zweiterem liefern sich tradionell seit vielen Jahren vor allem in Bayern verschiedene politische Parteien einen rhetorischen Schlagabtausch.
+  </p>
+  <p>
+    Auch in diesem Jahr lädt der <a href="https://piratenpartei-bayern.de">Landesverband Bayern der Piratenpartei Deutschland</a> wieder zum <b>piratigen Aschermittwoch</b> in <b>Straubing</b> ein.
+    <br>Willkommen sind alle Interessierten, Sympathisanten, Freunde und natürlich auch Mitglieder der Piratenpartei.
+  </p>
+  <p class="no-col-break">
+    <span class="image-wrapper">
+      <img src="../assets/speaker/Martina_Wenta_Icon.jpg" alt="Astrid Semm" />
+    </span>
+    <b>Martina Wenta</b>
+    <a href="https://twitter.com/mertl0rn" class="twitter">@mertl0rn</a>
+    <a href="https://www.facebook.com/Mertl0r" class="facebook">Martina Michaela Wenta</a>, Justizwachtmeisterin am Landgericht Traunstein und seit 2013 für die PIRATEN im Bezirkstag Oberbayern, wird den Nachmittag im <b>Magnobonus-Markmiller-Saal</b>    moderieren.
+  </p>
+  <p>
+    Als Redner dürfen wir uns auf verschiedene aktuelle und ehemalige politische Geschäftsführer*innen verschiedener Gliederungen der Piratenpartei freuen.
+  </p>
 </section>
-
 </template>
 
 <script>
-
 export default {
-    name: 'Intro'
+  name: 'Intro'
 };
-
 </script>
