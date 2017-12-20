@@ -12,13 +12,14 @@
     #map {
         width: 100%;
         height: 200px;
+        cursor: pointer;
     }
     #map-marker {
         width: 20px;
         height: 20px;
         border-radius: 10px;
         border: 1px solid fade(@white, 50%);
-        box-shadow: 0 0 2px 2px @orange;
+        box-shadow: 0 0 0 2px @orange;
     }
     p {
         padding: 10px 20px 0;
@@ -61,7 +62,7 @@
   <p class="time">
     <time datetime="2018-02-14T14:00:00">14. Februar 2018 14:00 Uhr</time>
   </p>
-  <div id="map" class="map"></div>
+  <a id="map" class="map" href="https://www.openstreetmap.org/way/154535030"></a>
   <img id="map-marker" src="../assets/icon.svg">
   <p><b>Magnobonus-Markmiller-Saal</b></p>
   <p>Äußere Passauer Straße 60
@@ -76,6 +77,8 @@ import OSM from 'ol/source/osm';
 import View from 'ol/view';
 import proj from 'ol/proj';
 import Overlay from 'ol/overlay';
+import interaction from 'ol/interaction';
+import control from 'ol/control';
 
 export default {
   name: 'Location',
@@ -92,7 +95,12 @@ export default {
         view: new View({
           center: coordinates,
           zoom: 13
-        })
+        }),
+        interactions: interaction.defaults({
+          mouseWheelZoom: false,
+          dragPan: false
+        }),
+        loadTilesWhileAnimating: true
       });
       map.addOverlay(new Overlay({
         element: document.getElementById('map-marker'),
