@@ -20,7 +20,7 @@ nav {
             margin: 0;
             display: table-cell;
             a {
-                padding: 10px 16px;
+                padding: 10px 5px 10px 10px;
                 display: block;
                 &:hover {
                     border: none;
@@ -35,6 +35,12 @@ nav {
             }
         }
     }
+}
+
+@media (min-width: 768px) {
+nav ul li a {
+  padding: 10px 16px;
+}
 }
 
 </style>

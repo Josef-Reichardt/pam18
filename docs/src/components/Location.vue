@@ -78,7 +78,6 @@ import View from 'ol/view';
 import proj from 'ol/proj';
 import Overlay from 'ol/overlay';
 import interaction from 'ol/interaction';
-import control from 'ol/control';
 
 export default {
   name: 'Location',
