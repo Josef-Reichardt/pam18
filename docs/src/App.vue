@@ -24,8 +24,8 @@ body {
     text-rendering: geometricPrecision;
     color: @black;
     background: @white;
-    > #app > main > section,
-    > #app > footer > section {
+    > #app > footer > section,
+    > #app > main > section {
         min-height: 300px;
         border-left: 15px solid @darkgray;
         padding: 40px 20px;
@@ -88,7 +88,8 @@ a {
         border-bottom: 2px solid @orange;
     }
 
-    &.twitter, &.facebook {
+    &.facebook,
+    &.twitter {
         font-size: 0.8em;
         color: @lightgray;
         padding: 4px;
@@ -121,8 +122,8 @@ a {
         }
     }
     &.twitter {
-      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVQ4jcXTzytFQRjG8c85C0ny6yh2NxtlYcGClFK47G6RrG1t1N1Y+FEIXQtlY2mp+C+UnYW/yeLMqeN4010o35qaeZ9n3nnfmYZ/Jq8vVpAFpgw7uEhjHkM4xVZlGsArToIEZ1ir+Y5wiTecV6YF7CXjHYoUn8NBkHQaT2hXgRYO07xIldzgGbNBgnV064FlvKfe6kymspt0a1WCqRTMA3PEteDCHzDTx+Yct5HQTkmabTTZxWokZH1UUShf6RvjGE3iJj6xGGyewCNGmsISPvCCbQw29Bwd3KeDQnLso4cr5YscK2+7h41f2vpBhjEMi//G3/IFbSgcAvdh4fkAAAAASUVORK5CYII=");
-      background-color: #4AB3F4;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVQ4jcXTzytFQRjG8c85C0ny6yh2NxtlYcGClFK47G6RrG1t1N1Y+FEIXQtlY2mp+C+UnYW/yeLMqeN4010o35qaeZ9n3nnfmYZ/Jq8vVpAFpgw7uEhjHkM4xVZlGsArToIEZ1ir+Y5wiTecV6YF7CXjHYoUn8NBkHQaT2hXgRYO07xIldzgGbNBgnV064FlvKfe6kymspt0a1WCqRTMA3PEteDCHzDTx+Yct5HQTkmabTTZxWokZH1UUShf6RvjGE3iJj6xGGyewCNGmsISPvCCbQw29Bwd3KeDQnLso4cr5YscK2+7h41f2vpBhjEMi//G3/IFbSgcAvdh4fkAAAAASUVORK5CYII=");
+        background-color: #4AB3F4;
     }
 
     &.facebook {
@@ -169,6 +170,15 @@ export default {
     Speaker,
     Social,
     Contact
+  },
+  mounted() {
+    if (localStorage.getItem('showBody') !== true) {
+      document.body.style.opacity = 0;
+      if (prompt('Dies ist eine Vorschau! Zur Anzeige bitte den Schlüssel eingeben... ;)') === '#pam18') {
+        document.body.style.opacity = 1;
+        localStorage.setItem('showBody', true);
+      }
+    }
   }
 };
 </script>

@@ -41,21 +41,21 @@
 
 <template>
 <section id="intro">
-  <p>
+  <p :style="textStyle">
     Kaum ist das Jahr 2017 rum geht es auch schon auf die nächsten Feiertage zu. Am 14. Februar 2018 erwarten uns gleich zwei besondere Tage: Neben dem Valentinstag ist zugleich auch Aschermittwoch.
     <br>An zweiterem liefern sich tradionell seit vielen Jahren vor allem in Bayern verschiedene politische Parteien einen rhetorischen Schlagabtausch.
   </p>
-  <p>
+  <p :style="textStyle">
     Auch in diesem Jahr lädt der <a href="https://piratenpartei-bayern.de">Landesverband Bayern der Piratenpartei Deutschland</a> wieder zum <b>piratigen Aschermittwoch</b> in <b>Straubing</b> ein.
     <br>Willkommen sind alle Interessierten, Sympathisanten, Freunde und natürlich auch Mitglieder der Piratenpartei.
   </p>
-  <p class="no-col-break">
+  <p :style="textStyle" class="no-col-break">
     <img src="../assets/speaker/Martina_Wenta_Icon.jpg" alt="Astrid Semm" class="avatar" />
     <b>Martina Wenta</b>
     <a href="https://twitter.com/mertl0rn" class="twitter"><span>@mertl0rn</span></a>
     <a href="https://www.facebook.com/Mertl0r" class="facebook"><span>Martina Michaela Wenta</span></a>, Justizwachtmeisterin am Landgericht Traunstein und seit 2013 für die PIRATEN im Bezirkstag Oberbayern, wird den Nachmittag im <b>Magnobonus-Markmiller-Saal</b>    moderieren.
   </p>
-  <p>
+  <p :style="textStyle">
     Als Redner dürfen wir uns auf verschiedene aktuelle und ehemalige politische Geschäftsführer*innen verschiedener Gliederungen der Piratenpartei freuen.
   </p>
 </section>
@@ -63,6 +63,27 @@
 
 <script>
 export default {
-  name: 'Intro'
+  name: 'Intro',
+  data() {
+    return {
+      textStyle: {
+        opacity: 1
+      }
+    }
+  },
+  methods: {
+    handleScroll() {
+      const offset = document.getElementById('wallpaper').clientHeight +
+        (document.getElementById('intro').clientHeight * 0.5);
+      const scrollBottom = window.scrollY + window.innerHeight;
+      this.textStyle.opacity = 1 - Math.min(1, Math.max(0, (offset - scrollBottom) / window.innerHeight * 5));
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 };
 </script>
