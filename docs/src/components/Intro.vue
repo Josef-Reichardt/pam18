@@ -92,7 +92,7 @@ export default {
     methods: {
         handleScroll() {
             const offset = document.getElementById('wallpaper').clientHeight +
-                (document.getElementById('intro').clientHeight * 0.5);
+                (window.innerHeight * 0.6);
             const scrollBottom = window.scrollY + window.innerHeight;
             this.textStyle.opacity = 1 - Math.min(1, Math.max(0, (offset - scrollBottom) / window.innerHeight * 5));
         }

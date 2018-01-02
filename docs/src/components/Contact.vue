@@ -10,6 +10,9 @@
         padding: 20px 20px 50px;
         color: @lightgray;
         font-size: 14px;
+        .logo img {
+            max-width: 100%;
+        }
         .claim {
             color: @orange;
             padding-top: 30px;
