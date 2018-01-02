@@ -3,6 +3,7 @@
 [id]#intro {
     border-left-color: @orange;
     background-color: fade(@lightgray, 70%);
+    overflow: hidden;
 
     p {
       margin: 0 0 10px 0;
