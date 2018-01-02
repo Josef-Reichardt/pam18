@@ -172,11 +172,11 @@ export default {
     Contact
   },
   mounted() {
-    if (localStorage.getItem('showBody') !== true) {
+    if (localStorage.getItem('showBody') !== 'true') {
       document.body.style.opacity = 0;
       if (prompt('Dies ist eine Vorschau! Zur Anzeige bitte den Schlüssel eingeben... ;)') === '#pam18') {
         document.body.style.opacity = 1;
-        localStorage.setItem('showBody', true);
+        localStorage.setItem('showBody', 'true');
       }
     }
   }
