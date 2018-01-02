@@ -84,70 +84,33 @@ p {
 a {
     color: @darkgray;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
     &:hover {
-        border-bottom: 2px solid @orange;
-    }
+        border-bottom-color: @orange;
 
-    &.facebook,
-    &.twitter {
-        font-size: 0.8em;
-        color: @lightgray;
-        padding: 4px;
-        border-radius: 20px;
-        position: relative;
-        overflow: visible;
-        content: ' ';
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        vertical-align: text-bottom;
-        background: none no-repeat center center transparent;
-        span {
-            display: none;
-            position: absolute;
-            top: -80%;
-            left: ~"calc( -50% - 10px )";
-            background: @darkgray;
-            padding: 2px 4px;
-            border-radius: 2px;
-            box-shadow: 0 0 2px @darkgray;
-            white-space: nowrap;
-            z-index: 999;
-        }
-        &:hover {
-            border: none;
-            span {
-                display: block;
-            }
-        }
     }
-    &.twitter {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVQ4jcXTzytFQRjG8c85C0ny6yh2NxtlYcGClFK47G6RrG1t1N1Y+FEIXQtlY2mp+C+UnYW/yeLMqeN4010o35qaeZ9n3nnfmYZ/Jq8vVpAFpgw7uEhjHkM4xVZlGsArToIEZ1ir+Y5wiTecV6YF7CXjHYoUn8NBkHQaT2hXgRYO07xIldzgGbNBgnV064FlvKfe6kymspt0a1WCqRTMA3PEteDCHzDTx+Yct5HQTkmabTTZxWokZH1UUShf6RvjGE3iJj6xGGyewCNGmsISPvCCbQw29Bwd3KeDQnLso4cr5YscK2+7h41f2vpBhjEMi//G3/IFbSgcAvdh4fkAAAAASUVORK5CYII=");
-        background-color: #4AB3F4;
-    }
-
-    &.facebook {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXklEQVQ4je3PoQ2AUAxF0eOQGBZgE9ZBQ7CAZwzGQPzRMFUEUwRBcJPm1bybli9TYcUcU7KCHi1qDDiygjlyQpMtw3LJFAVj7F1IUi/cCfbsFcsl0/wCtiiXp4J3OAE/+RIs6cJYHgAAAABJRU5ErkJggg==");
-        background-color: #4267B2;
+    &.no-border,
+    &.no-border:hover {
+        border: none;
     }
 }
 </style>
 
 <template>
 <div id="app">
-  <header id="pam18">
-    <navigation/>
-    <wallpaper/>
-  </header>
-  <main>
-    <intro/>
-    <location/>
-    <speaker/>
-    <social/>
-  </main>
-  <footer>
-    <contact/>
-  </footer>
+    <header id="pam18">
+        <navigation/>
+        <wallpaper/>
+    </header>
+    <main>
+        <intro/>
+        <location/>
+        <speaker/>
+        <social/>
+    </main>
+    <footer>
+        <contact/>
+    </footer>
 </div>
 </template>
 
@@ -160,25 +123,27 @@ import Speaker from '@/components/Speaker';
 import Social from '@/components/Social';
 import Contact from '@/components/Contact';
 
+require('font-awesome/css/font-awesome.css');
+
 export default {
-  name: 'app',
-  components: {
-    Navigation,
-    Wallpaper,
-    Intro,
-    Location,
-    Speaker,
-    Social,
-    Contact
-  },
-  mounted() {
-    if (localStorage.getItem('showBody') !== 'true') {
-      document.body.style.opacity = 0;
-      if (prompt('Dies ist eine Vorschau! Zur Anzeige bitte den Schlüssel eingeben... ;)') === '#pam18') {
-        document.body.style.opacity = 1;
-        localStorage.setItem('showBody', 'true');
-      }
+    name: 'app',
+    components: {
+        Navigation,
+        Wallpaper,
+        Intro,
+        Location,
+        Speaker,
+        Social,
+        Contact
+    },
+    mounted() {
+        if (localStorage.getItem('showBody') !== 'true') {
+            document.body.style.opacity = 0;
+            if (prompt('Dies ist eine Vorschau! Zur Anzeige bitte den Schlüssel eingeben... ;)') === '#pam18') {
+                document.body.style.opacity = 1;
+                localStorage.setItem('showBody', 'true');
+            }
+        }
     }
-  }
 };
 </script>

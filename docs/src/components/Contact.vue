@@ -1,5 +1,4 @@
 <style lang="less">
-
 @import "../assets/variables.less";
 [id]#contact {
     border-left-color: @lila;
@@ -19,7 +18,7 @@
             color: @white;
         }
         p {
-          margin-bottom: 15px;
+            margin-bottom: 15px;
         }
         b {
             font-weight: normal;
@@ -35,7 +34,7 @@
                 padding: 10px 0 0;
             }
         }
-        >p>img {
+        > p > img {
             max-width: 90%;
         }
     }
@@ -75,33 +74,28 @@
         }
     }
 }
-
 </style>
 
 <template>
-
 <section id="contact">
     <div class="imprint">
-        <p class="logo"><img src="../assets/logo_300.png" alt="Logo Piratenpartei Bayern"></p>
+        <p class="logo"><a href="https://www.piratenpartei-bayern.de/" class="no-border"><img src="../assets/logo_300.png" alt="Logo Piratenpartei Bayern"></a></p>
         <p class="links"><b>Piratenpartei Bayern</b>
             <nav>
                 <ul>
-                    <li><a href="https://www.piratenpartei.de/">www.piratenpartei.de</a></li>
-                    <li><a href="https://www.piratenpartei.de/kontakt/">Kontakt</a></li>
-                    <li><a href="https://www.piratenpartei.de/kontakt/impressum/">Impressum</a></li>
+                    <li><a href="https://www.piratenpartei-bayern.de/">www.piratenpartei-bayern.de</a></li>
+                    <li><a href="https://www.piratenpartei-bayern.de/kontakt/">Kontakt</a></li>
+                    <li><a href="https://www.piratenpartei-bayern.de/impressum/">Impressum</a></li>
                 </ul>
             </nav>
         </p>
         <p class="claim">Piraten. Freu dich aufs Neuland.</p>
     </div>
 </section>
-
 </template>
 
 <script>
-
 export default {
     name: 'Contact'
 };
-
 </script>
