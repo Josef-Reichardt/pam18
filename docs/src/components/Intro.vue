@@ -60,16 +60,19 @@
         Als Redner dürfen wir uns auf verschiedene aktuelle und ehemalige politische Geschäftsführer*innen verschiedener Gliederungen der Piratenpartei freuen.
     </p>
     <p :style="textStyle">
-        Der Eintritt ist selbstverständlich Kostenlos. Der Verzehr von selbst mitgebrachten Speißen und Getränken ist leider nicht gestattet.
+        Der Eintritt ist selbstverständlich Kostenlos. Der Verzehr von selbst mitgebrachten Speisen und Getränken ist leider nicht gestattet.
     </p>
     <p :style="textStyle">
-        Es wird ebenfalls wieder ein Fischgericht geben. Leider stehen zum aktuellen Zeitpunkt noch nicht alle Details zur Art und zum Umfang des Gerichtes fest. Bis auf weiteres handelt es sich also um:
+        Es wird ebenfalls wieder ein Fischgericht geben.
     </p>
     <p :style="textStyle" align="center">
-        <b>Überraschungs-Fisch-Gericht</b><br> mit Überraschungs-Beilage<br> für <b>??,?? €</b> <small>inkl. MwSt</small>
+        &nbsp;<br><b>Bio-Lachssteak</b><br>wahlweise mit<br>Rosmarin- oder Petersilien-Kartoffeln,<br>Zitronen-Dill-Soße und Gemüse<br><br>für <b>10,80 €</b> <small>inkl. MwSt</small><br>&nbsp;
     </p>
     <p :style="textStyle">
-        Zur besseren Planung ist hierfür eine verbindliche Anmeldung erforderlich. &raquo; <a href="https://form.jotformeu.com/80011658583355">Zum Anmeldeformular</a>
+        Zur besseren Planung ist hierfür eine verbindliche <b>Anmeldung</b> bis spätestens 7. Februar 2018 erforderlich. &raquo; <a href="https://form.jotformeu.com/80011658583355">Zum Anmeldeformular</a>
+    </p>
+    <p :style="textStyle">
+        Alternativ gibt es ohne Vorbestellung vor Ort auch Schnitzel.
     </p>
 </section>
 </template>
