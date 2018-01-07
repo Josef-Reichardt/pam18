@@ -38,32 +38,31 @@
         <li id="speaker-first-li" :style="textStyle1">
             <img src="../assets/speaker/Astrid_Semm_Icon.jpg" alt="Astrid Semm" :style="imgStyle1" />
             <strong>Astrid Semm</strong>
-            <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-            <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" /><br> Stellvertretende Politische Geschäftsführerin, Piratenpartei Deutschland
+            <icon-link icon="twitter" href="https://twitter.com/Frau_Semm" title="@Frau_Semm" />
+            <icon-link icon="facebook" href="https://www.facebook.com/astrid.semm" title="Astrid Semm" /><br> Stellvertretende Politische Geschäftsführerin der Piratenpartei Deutschland
         </li>
         <li :style="textStyle2">
-            <img src="../assets/speaker/Piratenlily_Icon.jpg" alt="Piratenlily" :style="imgStyle2" />
-            <strong>Ute Elisabeth Gabelmann</strong>
-            <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-            <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" /><br> Ehemalige Politische Geschäftsführerin, Piratenpartei Deutschland
+            <img src="../assets/speaker/Martin_Kollien-Glaser_Icon.jpg" alt="Martin Kollien-Glaser" :style="imgStyle2" />
+            <strong>Martin Kollien-Glaser</strong>
+            <icon-link icon="twitter" href="https://twitter.com/TygKF" title="@TygKF" />
+            <icon-link icon="facebook" href="https://www.facebook.com/martin.kollienglaser" title="Martin Kollien-Glaser" /><br> Landesvorsitzender der Piratenpartei Bayern
         </li>
         <li :style="textStyle3">
-            <img src="../assets/speaker/Benjamin_Wildenauer_Icon.jpg" alt="Benjamin Wildenauer" :style="imgStyle3" />
-            <strong>Benjamin Wildenauer</strong>
-            <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-            <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" /><br> Stellvertretender Politischer Geschäftsführer, Piratenpartei Bayern
+            <img src="../assets/speaker/Michele_Marsching_Icon.jpg" alt="Michele Marsching" :style="imgStyle3" />
+            <strong>Michele Marsching</strong>
+            <icon-link icon="twitter" href="https://twitter.com/mmarsching" title="@mmarsching" />
+            <icon-link icon="facebook" href="https://www.facebook.com/michele.marsching" title="Michele Marsching" /><br> Landesvorsitzender der Piratenpartei NRW
         </li>
         <li :style="textStyle4">
             <img src="../assets/speaker/Benjamin_Wildenauer_Icon.jpg" alt="Benjamin Wildenauer" :style="imgStyle4" />
             <strong>Benjamin Wildenauer</strong>
-            <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-            <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" /><br> Stellvertretender Politischer Geschäftsführer, Piratenpartei Bayern
+            <icon-link icon="twitter" href="https://twitter.com/brk_bewild" title="@brk_bewild" />
+            <icon-link icon="facebook" href="https://www.facebook.com/be.wild.7" title="Benjamin Wildenauer" /><br> Stellvertretender Politischer Geschäftsführer der Piratenpartei Bayern
         </li>
         <li :style="textStyle5">
-            <img src="../assets/speaker/Benjamin_Wildenauer_Icon.jpg" alt="Benjamin Wildenauer" :style="imgStyle5" />
-            <strong>Benjamin Wildenauer</strong>
-            <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-            <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" /><br> Stellvertretender Politischer Geschäftsführer, Piratenpartei Bayern
+            <img src="../assets/speaker/Mario_Filakovic_Icon.jpg" alt="Mario Filakovic" :style="imgStyle5" />
+            <strong>Mario Filakovic</strong>
+            <icon-link icon="twitter" href="https://twitter.com/fico_rb26" title="@fico_rb26" /><br> Themenbeauftragter Netzpolitik
         </li>
     </ul>
 </section>
