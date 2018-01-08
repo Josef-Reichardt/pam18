@@ -62,7 +62,9 @@
         <li :style="textStyle5">
             <img src="../assets/speaker/Mario_Filakovic_Icon.jpg" alt="Mario Filakovic" :style="imgStyle5" />
             <strong>Mario Filakovic</strong>
-            <icon-link icon="twitter" href="https://twitter.com/fico_rb26" title="@fico_rb26" /><br> Themenbeauftragter Netzpolitik
+            <icon-link icon="twitter" href="https://twitter.com/fico_rb26" title="@fico_rb26" />
+            <icon-link icon="facebook" href="https://www.facebook.com/mario.filakovic" title="Mario Filakovic" />
+            <br> Themenbeauftragter Netzpolitik
         </li>
     </ul>
 </section>
