@@ -54,7 +54,7 @@
         <img src="../assets/speaker/Martina_Wenta_Icon.jpg" alt="Astrid Semm" class="avatar" />
         <b>Martina Wenta</b>
         <icon-link icon="twitter" href="https://twitter.com/mertl0rn" title="@mertl0rn" />
-        <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" />, Justizwachtmeisterin am Landgericht Traunstein und seit 2013 für die PIRATEN im Bezirkstag Oberbayern, wird den Nachmittag im <b>Magnobonus-Markmiller-Saal</b> moderieren.
+        <icon-link icon="facebook" href="https://www.facebook.com/Mertl0r" title="Martina Michaela Wenta" />, Bezirksrätin der Piratenpartei in Oberbayern, wird den Nachmittag im <b>Magnobonus-Markmiller-Saal</b> moderieren.
     </p>
     <p :style="textStyle">
         Als Redner dürfen wir uns auf verschiedene aktuelle und ehemalige politische Geschäftsführer*innen verschiedener Gliederungen der Piratenpartei freuen.
