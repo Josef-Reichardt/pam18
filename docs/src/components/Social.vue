@@ -94,7 +94,7 @@ a.twitter-timeline:hover {
             <a class="twitter-timeline" href="https://twitter.com/hashtag/pam18" data-widget-id="935979645442371584" data-chrome="noborders noheader nofooter" data-width="100%" data-height="495">#pam18-Tweets</a>
         </div>
         <div class="facebook_wrapper hidden" @click="facebookClick" ref="facebookWrapper">
-            <div class="fb-page" data-href="https://www.facebook.com/PiratenparteiBayern" data-tabs="timeline,events" data-width="350" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+            <div class="fb-page" data-href="https://www.facebook.com/PiratenparteiBayern" data-tabs="events,timeline" data-width="350" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
                 <blockquote cite="https://www.facebook.com/PiratenparteiBayern" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PiratenparteiBayern">Piratenpartei Bayern</a></blockquote>
             </div>
             <!--<div class="fb-post" data-href="https://www.facebook.com/PiratenparteiBayern/posts/1650706761655726" data-width="100%" data-show-text="true">
