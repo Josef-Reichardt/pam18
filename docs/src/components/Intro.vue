@@ -24,6 +24,15 @@
         page-break-inside: avoid;
         break-inside: avoid;
     }
+
+    .orderlink {
+      text-align: center;
+      padding: 10px 0;
+      a {
+        color: @lila;
+        font-weight: bold;
+      }
+    }
 }
 
 @media (min-width: 768px) {
@@ -69,8 +78,13 @@
         &nbsp;<br><b>Bio-Lachssteak</b><br>wahlweise mit<br>Rosmarin- oder Petersilien-Kartoffeln,<br>Zitronen-Dill-Soße und Gemüse<br><br>für <b>10,80 €</b> <small>inkl. MwSt</small><br>&nbsp;
     </p>
     <p :style="textStyle">
-        Zur besseren Planung ist hierfür eine verbindliche <b>Anmeldung</b> bis spätestens 7. Februar 2018 erforderlich. &raquo; <a href="https://form.jotformeu.com/80011658583355">Zum Anmeldeformular</a>
+        Zur besseren Planung ist hierfür eine verbindliche <b>Anmeldung</b> bis spätestens 7. Februar 2018 erforderlich.
     </p>
+    <div :style="orderLinkStyle" class="orderlink">
+      &raquo;
+      <a href="https://form.jotformeu.com/80011658583355">Zum Anmeldeformular</a>
+      &laquo;
+    </div>
     <p :style="textStyle">
         Alternativ gibt es ohne Vorbestellung vor Ort auch Schnitzel.
     </p>
@@ -89,7 +103,12 @@ export default {
         return {
             textStyle: {
                 opacity: 1
-            }
+            },
+            orderLinkStyle: {
+              opacity: 1,
+              textIndent: 0
+            },
+            bounced: false
         }
     },
     methods: {
@@ -98,6 +117,28 @@ export default {
                 (window.innerHeight * 0.6);
             const scrollBottom = window.scrollY + window.innerHeight;
             this.textStyle.opacity = 1 - Math.min(1, Math.max(0, (offset - scrollBottom) / window.innerHeight * 5));
+            this.orderLinkStyle.opacity = this.textStyle.opacity;
+
+            if(this.textStyle.opacity >= 1 && !this.bounced) {
+              this.bounced = true;
+
+console.log('bounce');
+              this.orderLinkStyle.textIndent = '-5px';
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '-2px', 50);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '0px', 100);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '1px', 150);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '3px', 200);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '0px', 250);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '-2px', 300);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '1px', 350);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '5px', 400);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '1px', 450);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '-3px', 500);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '0px', 550);
+              window.setTimeout(() => this.orderLinkStyle.textIndent = '4px', 600);
+            } else if(this.textStyle.opacity < 1 && this.bounced) {
+              this.bounced = false;
+            }
         }
     },
     created() {

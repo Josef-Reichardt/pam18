@@ -21,6 +21,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: DejaWeb, sans-serif;
+    font-size: 16px;
     text-rendering: geometricPrecision;
     color: @black;
     background: @white;
