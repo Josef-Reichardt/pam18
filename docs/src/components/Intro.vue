@@ -7,6 +7,7 @@
 
     p {
         margin: 0 0 10px;
+        overflow: hidden;
     }
 
     img.avatar {
@@ -58,6 +59,7 @@
     <p :style="textStyle">
         Auch in diesem Jahr lädt der <a href="https://piratenpartei-bayern.de">Landesverband Bayern der Piratenpartei Deutschland</a> wieder zum <b>piratigen Aschermittwoch</b> in <b>Straubing</b> ein.
         <br>Willkommen sind alle Interessierten, Sympathisanten, Freunde und natürlich auch Mitglieder der Piratenpartei.
+        <br>&nbsp;
     </p>
     <p :style="textStyle" class="no-col-break">
         <img src="../assets/speaker/Martina_Wenta_Icon.jpg" alt="Astrid Semm" class="avatar" />
@@ -80,11 +82,11 @@
     <p :style="textStyle">
         Zur besseren Planung ist hierfür eine verbindliche <b>Anmeldung</b> bis spätestens 7. Februar 2018 erforderlich.
     </p>
-    <div :style="orderLinkStyle" class="orderlink">
+    <p :style="orderLinkStyle" class="orderlink">
       &raquo;
-      <a href="https://form.jotformeu.com/80011658583355">Zum Anmeldeformular</a>
+      <a href="https://form.jotformeu.com/80011658583355">Jetzt anmelden!</a>
       &laquo;
-    </div>
+    </p>
     <p :style="textStyle">
         Alternativ gibt es ohne Vorbestellung vor Ort auch Schnitzel.
     </p>
@@ -122,7 +124,6 @@ export default {
             if(this.textStyle.opacity >= 1 && !this.bounced) {
               this.bounced = true;
 
-console.log('bounce');
               this.orderLinkStyle.textIndent = '-5px';
               window.setTimeout(() => this.orderLinkStyle.textIndent = '-2px', 50);
               window.setTimeout(() => this.orderLinkStyle.textIndent = '0px', 100);
