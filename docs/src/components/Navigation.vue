@@ -27,10 +27,16 @@ nav {
                     > span {
                         border-bottom: 2px solid @orange;
                     }
+                    > i {
+                      color: @orange;
+                    }
                 }
                 &.active,
                 &:active {
                     color: @lila;
+                }
+                span.optional-label {
+                  display: none;
                 }
             }
         }
@@ -38,9 +44,12 @@ nav {
 }
 
 @media (min-width: 768px) {
-nav ul li a {
-  padding: 10px 16px;
-}
+  nav ul li a {
+    padding: 10px 16px;
+    span.optional-label {
+      display: inline;
+    }
+  }
 }
 
 </style>
@@ -49,9 +58,26 @@ nav ul li a {
 
 <nav>
     <ul>
-        <li><a data-scroll href="#pam18" :class="{ active: currentHash=='pam18' }"><span>#pam18</span></a></li>
-        <li><a data-scroll href="#location" :class="{ active: currentHash=='location' }"><span>Wann &amp; Wo?</span></a></li>
-        <li><a data-scroll href="#speaker" :class="{ active: currentHash=='speaker' }"><span>Redner?</span></a></li>
+        <li><a data-scroll href="#pam18" :class="{ active: currentHash=='pam18' }">
+          <span><b>#pam18</b></span>
+        </a></li>
+        <li><a data-scroll href="#location" :class="{ active: currentHash=='location' }">
+          <i class="fa fa-calendar"></i>
+          <i class="fa fa-map-marker"></i>
+          <span class="optional-label">Wann &amp; Wo?</span>
+        </a></li>
+        <li><a data-scroll href="#speaker" :class="{ active: currentHash=='speaker' }">
+          <i class="fa fa-users"></i>
+          <span class="optional-label">Redner?</span>
+        </a></li>
+        <li><a data-scroll href="#stream" :class="{ active: currentHash=='stream' }">
+          <i class="fa fa-video-camera"></i>
+          <span class="optional-label">Live-Stream</span>
+        </a></li>
+        <li><a data-scroll href="#social" :class="{ active: currentHash=='social' }">
+          <i class="fa fa-hashtag"></i>
+          <span class="optional-label">Social</span>
+        </a></li>
     </ul>
 </nav>
 

@@ -4,14 +4,14 @@
     border-left-color: @darkgray;
     padding: 40px 0;
     h3 {
-        margin-bottom: 10px;
+        margin: 0 20px 10px;
     }
     .youtube_wrapper {
-        margin-top: 30px;
         width: 100%;
         background: @black;
     }
     .twitter_wrapper {
+        margin-top: 30px;
         width: 100%;
         background: @white;
     }
@@ -77,6 +77,9 @@
 @media (min-width: 1200px) {
     [id]#social {
         padding: 40px 20px;
+        h3 {
+          margin-left: 0;
+        }
         .social_row {
             position: relative;
             .youtube_wrapper {
@@ -91,18 +94,13 @@
                 position: absolute;
                 left: ~"calc( 50% + 10px )";
                 top: 0;
-                // margin-right: 10px;
-                // width: ~"calc( 100% - 370px )";
+                margin: 0;
             }
             .facebook_wrapper {
                 width: ~"calc( 25% - 20px )";
                 position: absolute;
                 right: 0;
                 top: 0;
-                // width: 350px;
-                // position: absolute;
-                // top: 0;
-                // right: 0;
                 margin: 0;
             }
         }
@@ -119,7 +117,7 @@ a.twitter-timeline:hover {
 
 <template>
 <section id="social">
-    <h3>Social</h3>
+    <h3><i class="fa fa-hashtag"></i> Social</h3>
     <div class="social_row" ref="socialRow">
         <div class="youtube_wrapper hidden" @click="youTubeClick" ref="youtubeWrapper">
         </div>

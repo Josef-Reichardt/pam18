@@ -25,7 +25,7 @@
                 border: 3px solid @white;
                 box-shadow: 0 0 0 5px @black;
             }
-			
+
 			.fotoinfo {
 				font-size: 0.7em;
 			}
@@ -36,7 +36,7 @@
 
 <template>
 <section id="speaker">
-    <h3>Redner?</h3>
+    <h3><i class="fa fa-users"></i> Redner?</h3>
 
     <ul>
         <li id="speaker-first-li" :style="textStyle1">

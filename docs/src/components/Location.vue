@@ -61,7 +61,11 @@
 
 <template>
 <section id="location">
-  <h3 :style="textStyle">Wann &amp; Wo?</h3>
+  <h3 :style="textStyle">
+    <i class="fa fa-calendar"></i>
+    <i class="fa fa-map-marker"></i>
+    Wann &amp; Wo?
+  </h3>
   <p class="time" :style="textStyle">
     <time datetime="2018-02-14T14:00:00">14. Februar 2018 14:00 Uhr</time>
   </p>

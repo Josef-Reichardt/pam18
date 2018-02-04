@@ -107,6 +107,7 @@ a {
         <intro/>
         <location/>
         <speaker/>
+        <stream/>
         <social/>
     </main>
     <footer>
@@ -121,6 +122,7 @@ import Wallpaper from '@/components/Wallpaper';
 import Intro from '@/components/Intro';
 import Location from '@/components/Location';
 import Speaker from '@/components/Speaker';
+import Stream from '@/components/Stream';
 import Social from '@/components/Social';
 import Contact from '@/components/Contact';
 
@@ -134,6 +136,7 @@ export default {
         Intro,
         Location,
         Speaker,
+        Stream,
         Social,
         Contact
     }
