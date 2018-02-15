@@ -55,7 +55,7 @@
 
 <template>
 <section id="stream">
-    <h3><i class="fa fa-video-camera"></i> Live-Stream</h3>
+    <h3><i class="fa fa-video-camera"></i> Aufzeichnung</h3>
     <div class="stream_row" ref="streamRow">
         <div class="youtube_wrapper hidden" @click="youTubeClick" ref="youtubeWrapper">
         </div>

@@ -72,7 +72,7 @@ nav {
         </a></li>
         <li><a data-scroll href="#stream" :class="{ active: currentHash=='stream' }">
           <i class="fa fa-video-camera"></i>
-          <span class="optional-label">Live-Stream</span>
+          <span class="optional-label">Aufzeichnung</span>
         </a></li>
         <li><a data-scroll href="#social" :class="{ active: currentHash=='social' }">
           <i class="fa fa-hashtag"></i>
