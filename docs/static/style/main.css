@@ -1,0 +1,117 @@
+/* fonts: */
+
+@font-face {
+  font-family: "DejaWeb";
+  src: url("../fonts/dejaweb/DejaWeb.eot");
+  src: url("../fonts/dejaweb/DejaWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/dejaweb/DejaWeb.woff2") format("woff2"), url("../fonts/dejaweb/DejaWeb.woff") format("woff"), url("../fonts/dejaweb/DejaWeb.ttf") format("truetype"), url("../fonts/dejaweb/DejaWeb.svg#DejaWeb") format("svg");
+}
+
+/* basics*/
+
+html, body, main, h1, p {
+  margin: 0;
+  padding: 0
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: DejaWeb, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #652480;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* background */
+
+body {
+  background: url(../img/wallpaper.jpg) center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* header */
+
+header {
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 100px;
+}
+
+header .header-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header h1 {
+  margin: 0 auto;
+  background: url(../img/Piratiger-Aschermittwoch-Rauten.svg) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 200px;
+  height: 100px;
+}
+
+header h1 a {
+  text-indent: -1000px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header p {
+  margin: 5px 0 5px 0;
+}
+
+@media screen and (min-width: 769px) {
+  header h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header p {
+    margin: 0 0 5px 220px;
+  }
+  header p:first-of-type {
+    padding-top: 20px;
+  }
+}
+
+/* footer */
+
+footer {
+  margin: 50px 0 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px 0;
+}
+
+/* video */
+
+main iframe {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 769px) {
+  main iframe {
+    width: 800px;
+    height: 450px;
+    max-width: 100%;
+    margin: 30px auto;
+  }
+}
